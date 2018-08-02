@@ -6,7 +6,7 @@ const day = props => {
   return (
     <td>
       <div className="day">
-        <Todo />
+        <Todo text={props.todo.text} />
       </div>
     </td>
   );
