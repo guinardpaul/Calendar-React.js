@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.day {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}
+
+.todo {
+  width: 100%;
+  background-color: brown;
+}
