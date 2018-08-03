@@ -11,15 +11,15 @@ class App extends React.Component {
 
   handlePreviousMonth = () => {
     const previousMonth = this.state.currentMonth;
-    // if (previousState.currentMonth > 0) {
-    this.setState({
-      currentMonth: previousMonth - 1
-    });
-    // }
+    if (previousMonth > 0) {
+      this.setState({
+        currentMonth: previousMonth - 1
+      });
+    }
   };
   handleNextMonth = () => {
     const previousMonth = this.state.currentMonth;
-    if (previousState.currentMonth < month.length) {
+    if (previousMonth < month.length - 1) {
       this.setState({
         currentMonth: previousMonth + 1
       });
@@ -44,7 +44,7 @@ class App extends React.Component {
         days.push(<Day key={i + j} todo={{ text: "Todo1" }} />);
         remainingDays--;
       }
-      displayDay.push(<tr>{days}</tr>);
+      displayDay.push(<tr key={i}>{days}</tr>);
     }
     return (
       <div className="App">
